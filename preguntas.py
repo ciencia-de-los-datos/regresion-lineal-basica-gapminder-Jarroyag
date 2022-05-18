@@ -41,12 +41,14 @@ def pregunta_01():
     # Imprima las nuevas dimensiones de `X`
     print(X_reshaped.shape)
 
-
+    
 def pregunta_02():
     """
     En este punto se realiza la impresión de algunas estadísticas básicas
     Complete el código presentado a continuación.
     """
+    import numpy as np
+    import pandas as pd
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
@@ -72,6 +74,8 @@ def pregunta_03():
     Entrenamiento del modelo sobre todo el conjunto de datos.
     Complete el código presentado a continuación.
     """
+    import numpy as np
+    import pandas as pd
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
@@ -110,6 +114,8 @@ def pregunta_04():
     Particionamiento del conjunto de datos usando train_test_split.
     Complete el código presentado a continuación.
     """
+    import numpy as np
+    import pandas as pd
 
     # Importe LinearRegression
     # Importe train_test_split
@@ -117,7 +123,7 @@ def pregunta_04():
     from sklearn.linear_model import LinearRegression
     from sklearn.model_selection import train_test_split
     from sklearn.linear_model import LogisticRegression
-    from sklearn.metrics import mean_absolute_error
+    from sklearn.metrics import mean_squared_error
     from math import sqrt
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
