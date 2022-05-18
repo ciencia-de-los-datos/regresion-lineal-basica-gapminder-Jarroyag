@@ -5,9 +5,10 @@ Regresión Lineal Univariada
 En este laboratio se construirá un modelo de regresión lineal univariado.
 
 """
+
 import numpy as np
 import pandas as pd
-from sklearn.metrics import mean_squared_error
+
 
 
 def pregunta_01():
@@ -24,10 +25,10 @@ def pregunta_01():
     X = df["fertility"].values
 
     # Imprima las dimensiones de `y`
-    print(y.shape)
+    print(np.shape(y))
 
     # Imprima las dimensiones de `X`
-    print(X.shape)
+    print(np.shape(X))
 
     # Transforme `y` a un array de numpy usando reshape
     y_reshaped = y.reshape(139,1)
@@ -54,7 +55,7 @@ def pregunta_02():
     df = pd.read_csv("gm_2008_region.csv")
 
     # Imprima las dimensiones del DataFrame
-    print(df.shape)
+    print(np.shape(df))
 
     # Imprima la correlación entre las columnas `life` y `fertility` con 4 decimales.
     print(round(df["life"].corr(df["fertility"]),4))
@@ -122,9 +123,8 @@ def pregunta_04():
     # Importe mean_squared_error
     from sklearn.linear_model import LinearRegression
     from sklearn.model_selection import train_test_split
-    from sklearn.linear_model import LogisticRegression
     from sklearn.metrics import mean_squared_error
-    from math import sqrt
+    
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
